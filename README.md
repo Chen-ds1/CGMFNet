@@ -108,16 +108,6 @@ models/<experiment-name>/
 `-- model.pth
 ```
 
-## Low-light input
-
-Low-light experiments still read both RGB and depth images from the dataset.
-To simulate an environment without visible light, place actual black RGB image
-files in `images_lowLight/` and keep their matching depth images in `depths/`.
-
-```bash
-python train.py --name CGMFNet-L4-LowLight --arch CGMFNetL4 --rgb_folder images_lowLight --depth_folder depths
-```
-
 ## Validation and evaluation
 
 ```bash
