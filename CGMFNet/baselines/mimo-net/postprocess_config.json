@@ -1,0 +1,5 @@
+{
+  "threshold": 0.35,
+  "min_support": 0.25,
+  "radius_fraction": 0.015
+}
