@@ -1,0 +1,28 @@
+{
+  "data": {
+    "labelme_dir": "inputs",
+    "manifest_dir": "data/labelme",
+    "labels": [
+      "rice_row"
+    ],
+    "grouping": "capture",
+    "seed": 42
+  },
+  "train": {
+    "epochs": 100,
+    "batch_size": 8,
+    "lr": 0.001,
+    "weight_decay": 0.01,
+    "workers": 0,
+    "device": "auto",
+    "pretrained": false
+  },
+  "inference": {
+    "weights": null,
+    "score": null,
+    "nms_distance": 15,
+    "input": "inputs",
+    "line_mode": "extended",
+    "warmup": 50
+  }
+}
