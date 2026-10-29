@@ -1,0 +1,56 @@
+{
+  "model": "esanet_rgbd",
+  "data_root": "inputs/SeedingImg",
+  "output_root": "runs",
+  "checkpoint": "runs/experiment_01/best.pth",
+  "run_name": "experiment_01",
+  "device": "cuda:0",
+  "seed": 42,
+  "height": 480,
+  "width": 640,
+  "rgb_dir": "rgb",
+  "depth_dir": "depths",
+  "mask_dir": "masks/0",
+  "rgb_mean": [
+    0.485,
+    0.456,
+    0.406
+  ],
+  "rgb_std": [
+    0.229,
+    0.224,
+    0.225
+  ],
+  "depth": {
+    "encoding": "realsense_pseudocolor",
+    "suffix": ".png"
+  },
+  "architecture": {
+    "initialization": "random",
+    "pretrained": false,
+    "drop_path_rate": 0.25,
+    "input_adaptation": "3-channel pseudocolor; learned scalar guide in DFormerv2"
+  },
+  "train": {
+    "epochs": 100,
+    "batch_size": 2,
+    "lr": 0.0001,
+    "weight_decay": 0.01,
+    "poly_power": 0.9,
+    "amp": false,
+    "aux_weight": 0.4,
+    "horizontal_flip_probability": 0.5
+  },
+  "evaluation": {
+    "name": "test_01",
+    "warmup": 20,
+    "amp": false,
+    "groups_csv": ""
+  },
+  "experiment_label": "ESANet (pseudocolor adaptation)",
+  "dataset_dirs": {
+    "train": "inputs/SeedingImg/train",
+    "val": "inputs/SeedingImg/val",
+    "test": "inputs/SeedingImg/test"
+  }
+}
