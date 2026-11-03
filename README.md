@@ -5,8 +5,37 @@ detection in paddy fields. It uses paired RGB and depth images to improve
 segmentation under challenging conditions such as illumination changes,
 water-surface reflections, occlusion, and missing seedlings.
 
-The repository also contains a crop-row detection application and three
-segmentation baselines: DeepLabV3+, PSPNet, and SegFormer.
+The repository also includes a crop-row detection application and multiple
+baseline methods for comparison.
+
+## Demonstrations
+
+<table>
+  <tr>
+    <th width="25%">Demo 1</th>
+    <th width="25%">Demo 2</th>
+    <th width="25%">Demo 3</th>
+    <th width="25%">Demo 4</th>
+  </tr>
+  <tr>
+    <td align="center"><img src="assets/1.gif" alt="Demo 1" width="200"></td>
+    <td align="center"><img src="assets/2.gif" alt="Demo 2" width="200"></td>
+    <td align="center"><img src="assets/3.gif" alt="Demo 3" width="200"></td>
+    <td align="center"><img src="assets/4.gif" alt="Demo 4" width="200"></td>
+  </tr>
+  <tr>
+    <th width="25%">Demo 5</th>
+    <th width="25%">Demo 6</th>
+    <th width="25%">Demo 7</th>
+    <th width="25%">Demo 8</th>
+  </tr>
+  <tr>
+    <td align="center"><img src="assets/5.gif" alt="Demo 5" width="200"></td>
+    <td align="center"><img src="assets/6.gif" alt="Demo 6" width="200"></td>
+    <td align="center"><img src="assets/7.gif" alt="Demo 7" width="200"></td>
+    <td align="center"><img src="assets/8.gif" alt="Demo 8" width="200"></td>
+  </tr>
+</table>
 
 ## Main components
 
@@ -38,9 +67,6 @@ CGMFNet/
 |-- requirements.txt
 |-- requirements-gui.txt
 `-- baselines/
-    |-- deeplabv3plus/
-    |-- pspnet/
-    `-- segformer/
 ```
 
 ## Installation
@@ -67,7 +93,6 @@ RGB images, depth images, and masks must use matching file names.
 inputs/
 `-- SeedingImg/
     |-- images/
-    |-- images_lowLight/
     |-- depths/
     |-- rgb_masks/
     |   `-- 0/
@@ -108,16 +133,6 @@ models/<experiment-name>/
 `-- model.pth
 ```
 
-## Low-light input
-
-Low-light experiments still read both RGB and depth images from the dataset.
-To simulate an environment without visible light, place actual black RGB image
-files in `images_lowLight/` and keep their matching depth images in `depths/`.
-
-```bash
-python train.py --name CGMFNet-L4-LowLight --arch CGMFNetL4 --rgb_folder images_lowLight --depth_folder depths
-```
-
 ## Validation and evaluation
 
 ```bash
@@ -131,12 +146,12 @@ checkpoint.
 
 ## Pretrained models
 
-The repository includes checkpoints for CGMFNet-L1, CGMFNet-L2, CGMFNet-L3,
-CGMFNet-L4, CGMFNet-L4-LowLight, and SegFormer.
+Checkpoints for CGMFNet-L1, CGMFNet-L2, CGMFNet-L3, and CGMFNet-L4 are
+included in the repository.
 
-The DeepLabV3+ and PSPNet checkpoints are not included because of their large
-file sizes. Their source code and training scripts remain available under
-`baselines/`.
+Baseline checkpoints are not all included, as some weight files are too large
+to upload. The corresponding baseline source code and training scripts are
+available under `baselines/`.
 
 ## Crop-row application
 
