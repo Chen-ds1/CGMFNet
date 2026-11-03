@@ -18,10 +18,10 @@ baseline methods for comparison.
     <th width="25%">Demo 4</th>
   </tr>
   <tr>
-    <td align="center"><img src="assets/1.gif" alt="Demo 1" width="200"></td>
-    <td align="center"><img src="assets/2.gif" alt="Demo 2" width="200"></td>
-    <td align="center"><img src="assets/3.gif" alt="Demo 3" width="200"></td>
-    <td align="center"><img src="assets/4.gif" alt="Demo 4" width="200"></td>
+    <td align="center"><img src="CGMFNet/assets/1.gif" alt="Demo 1" width="200"></td>
+    <td align="center"><img src="CGMFNet/assets/2.gif" alt="Demo 2" width="200"></td>
+    <td align="center"><img src="CGMFNet/assets/3.gif" alt="Demo 3" width="200"></td>
+    <td align="center"><img src="CGMFNet/assets/4.gif" alt="Demo 4" width="200"></td>
   </tr>
   <tr>
     <th width="25%">Demo 5</th>
@@ -30,10 +30,10 @@ baseline methods for comparison.
     <th width="25%">Demo 8</th>
   </tr>
   <tr>
-    <td align="center"><img src="assets/5.gif" alt="Demo 5" width="200"></td>
-    <td align="center"><img src="assets/6.gif" alt="Demo 6" width="200"></td>
-    <td align="center"><img src="assets/7.gif" alt="Demo 7" width="200"></td>
-    <td align="center"><img src="assets/8.gif" alt="Demo 8" width="200"></td>
+    <td align="center"><img src="CGMFNet/assets/5.gif" alt="Demo 5" width="200"></td>
+    <td align="center"><img src="CGMFNet/assets/6.gif" alt="Demo 6" width="200"></td>
+    <td align="center"><img src="CGMFNet/assets/7.gif" alt="Demo 7" width="200"></td>
+    <td align="center"><img src="CGMFNet/assets/8.gif" alt="Demo 8" width="200"></td>
   </tr>
 </table>
 
